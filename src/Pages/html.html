@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"] {
+            position: relative;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #2B2D32;
+            margin: 0px 18px 0px 0px;
+            color: #2C2333;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #919191;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 3px;
+        }
+
+        input[type="checkbox"]::before {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            content: "";
+            width: 12px;
+            height: 12px;
+            transition: 120ms transform ease-in-out;
+            background: #9DBC35;
+            transform: scale(0);
+            opacity: 0;
+            transform-origin: bottom left;
+            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+
+        }
+
+        input[type="checkbox"]:checked::before {
+            transform: scale(1);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <!-- <label for="">checkbox</label> <input type="checkbox" /> -->
+        <div class="item">Item</div>
+        <div class="item">Item with more text in it.</div>
+
+        <input type="checkbox" placeholder="checkbox" class="chkunchktyp" />
+        <input type="checkbox" />
+
+    </div>
+</body>
+
+</html>

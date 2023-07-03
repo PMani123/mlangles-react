@@ -1,0 +1,341 @@
+.inneruser {
+    padding: 38px;
+    padding-top: 100px;
+}
+
+.eachbutton {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    background: #161D2F;
+    /* border: 1px solid #2B2D32; */
+    border-radius: 3px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.eachbutton img {
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+}
+
+.eachbutton span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.usertable {
+    margin-top: 14px;
+}
+
+.usertable table thead tr {
+    background: #212B46;
+}
+
+.hovername:hover {
+    color: #0E8EBE;
+}
+
+.usertable table tbody td {
+    color: #6A6E79;
+}
+
+.modaledit {
+    width: 1167px;
+    height: 600px;
+}
+
+.edit-title {
+    margin-bottom: 36px;
+}
+
+.modaleditbtn {
+    margin-top: 45px;
+}
+
+.inside-newuser {
+    padding: 26px 36px;
+    padding-top: 100px;
+}
+
+.page-heading {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.errorHeading {
+    margin-bottom: 36px;
+}
+
+.errorHeading span {
+    margin-left: 16px;
+}
+
+.buttonnewrole {
+    height: 40px;
+    margin: 0px;
+    margin-top: 8px;
+}
+
+.each-boxing {
+    margin: 0px;
+    display: -webkit-inline-box;
+    width: 100%;
+}
+
+.details h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B1B1B1;
+    margin: 0px;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.details li {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6A6E79;
+    list-style: initial;
+}
+
+.createuserbtn {
+    margin-top: 42px;
+}
+
+.dropdwon-profile {
+    background: #161D2F;
+}
+
+.dropdwon-user {
+    background: #212B46;
+}
+
+.posrelform {
+    position: relative;
+}
+
+.innerrole {
+    padding: 28px 35px;
+    padding-top: 100px;
+}
+
+.role label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B1B1B1;
+    margin-right: 22px;
+}
+
+.role input {
+    background: #161D2F;
+    border: 1px solid #232025;
+    border-radius: 7px;
+    padding: 12px 24px;
+    color: #6A6E79;
+    width: 400px;
+}
+
+.selectpolicy {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B0D136;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.tables {
+    background: #212B46;
+}
+
+.module-right {
+    border-right: 3px solid #070d19;
+    padding: 12px 44px;
+}
+
+.policyspace {
+    padding: 12px 74px;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.insideTable label {
+    margin-left: 26px;
+}
+
+.insideTable .eachcheck {
+    padding: 12px;
+    border-bottom: 1px solid #2B2D32;
+}
+
+.insideTable .border-bott {
+    border: 1px solid #2B2D32;
+    border-bottom: none;
+}
+
+.insideTable .paddleft {
+    padding-left: 18px;
+}
+
+.create-btn {
+    margin-top: 36px;
+    cursor: pointer;
+}
+
+.marright38 {
+    margin-right: 38px;
+}
+
+.d-table-td-top {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 42px;
+}
+
+.allroles {
+    padding: 14px 36px 0px 24px;
+    overflow: auto;
+    height: 80vh;
+    padding-top: 100px;
+}
+
+.marBot12 {
+    margin-bottom: 12px;
+}
+
+.allroles input {
+    margin-right: 12px;
+}
+
+.allroles table thead tr {
+    background: #212B46;
+}
+
+.allroles table thead th {
+    border-right: px solid #070d19;
+}
+
+.allroles table thead th:nth-last-child(1) {
+    border: none;
+}
+
+table thead th {
+    border-right: 2px solid #070d19;
+}
+
+.edit-content h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #B0D136;
+    margin-bottom: 30px;
+}
+
+.editmodal {
+    width: 1110px;
+    height: 800px;
+    padding: 35px;
+    background: #161D2F;
+}
+
+.edit-content .rolename {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #6A6E79;
+    width: 38%;
+}
+
+.editmodal-table .th {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    border: none;
+}
+
+
+.editmodal-table .border-bott {
+    background: #070D19;
+    color: #6A6E79;
+}
+
+.modaleditpopup {
+    height: 500px;
+    overflow: scroll;
+}
+
+
+.editmodal:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.create-userbtn {
+    background: #212B46;
+}
+
+.backgrey {
+    background: #0F131B;
+}
+
+.fullsetbtn {
+    margin-top: 12px;
+}
+
+.opacity50 {
+    opacity: 0.5;
+}
+
+.rolename {
+    color: #6A6E79;
+    background: #161D2F;
+    border: none;
+    outline: none;
+}
+
+.rolename input {
+    border-bottom: 1px solid #6A6E79;
+}
+
+.usertable .usercheckbox {
+    margin-right: 20px;
+}
+
+.padlef40 {
+    padding-left: 55px;
+}
+
+.allroles table {
+    border: 1px solid rgba(82, 82, 82, 0.42);
+}
+
+.align-border-bot {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #2B2D32;
+}

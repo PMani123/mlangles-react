@@ -1,0 +1,64 @@
+.head-bg {
+    background: #121315;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    height: 70px;
+}
+
+.header {
+    padding: 6px;
+    /* width: 100%;
+    position: fixed;
+    background: #000;
+    z-index: 1;
+    padding-right: 12px; */
+}
+
+.headicon {
+    width: 68px;
+}
+
+.head-input {
+    background: #000000;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #333;
+    color: #333;
+    padding: 6px 12px;
+}
+
+.search {
+    position: relative;
+}
+
+.head-search-icon {
+    margin-left: -36px;
+    margin-top: 12px;
+    z-index: 9;
+    position: absolute;
+}
+
+.notifi {
+    position: relative;
+}
+
+.notifi-number {
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    background: #EF1B2E;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    left: 10px;
+    top: -4px;
+}
+
+.header .fa-bell {
+    color: #fff;
+}

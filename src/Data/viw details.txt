@@ -1,0 +1,76 @@
+# FOR ASSIGNING THE PROJECT WE HAVE TO SEND EMAIL VERIFICATION
+@api_view(["POST"])
+def send_email_project_assign_verification(request, pi):
+    # CHECKING FOR THE TOKEN
+    payload =  check_user_token(request)
+    # IF THERE IS TOKEN
+    if payload:
+        mla_user_details, user__id, success, organization = check_user_details_payload(payload)
+
+        project = create_projects.objects.filter(project_id = pi).values()
+        # SEND COMFORMATION EMAIL BY SELECTING MULTIPUL EMAIL TO THE MULTIPUL USERS
+        if request.method == "POST":
+            # GETTING THE MULTIPUL USER EMAIL FOR THE USER
+            assign_person = request.data['persons']
+            assign_project_details = user_assigned_projectsSerializers(data=request.data)
+            # ITRATING THE USER EMAIL TO SEND THE MESSAGE
+            for per in range(len(assign_person)):
+                if assign_project_details.is_valid():
+                    print(assign_person[per])
+                    userDetails = UserAccount.objects.filter(email = assign_person[per]).values()
+                    save_data = user_assigned_projects(
+                        project_id = project[0]['project_id'],
+                        is_active = 0,
+                        project_owner_id = user__id,
+                        assign_user_id = userDetails[0]['user_account_id']
+                    )
+                    # Conformation link to assign to project
+                    url = f"127.0.0.1:8000/mlflow/assigned_activation/{project[0]['project_id']}/{user__id}/{userDetails[0]['user_account_id']}"
+                    # Getting the user name reciver name and url
+                    owner = get_user_name(user__id)
+                    reciver = userDetails[0]['user_first_name']
+                    project_name = project[0]['project_name']
+                    # Getting connection SMTP
+                    s = smtplib.SMTP('smtp.gmail.com', 587)
+                    s.starttls()
+                    s.login("jayaharisai1212@gmail.com", "odkigqvtvjmtgjfv")
+
+                    msg = MIMEMultipart()
+
+                    msg['From'] = owner
+                    msg['To'] = assign_person[per]
+                    msg['Subject'] = f"Assign to project {project_name}"
+
+                    email_body = f"""
+                    <div>
+                    <h1>MLANGLES</h1>
+                    <div>
+                        <p>From: {owner}</p>
+                        <p>To: {reciver}</p>
+                        <p>Hi, {reciver} you have been assigned to <u>{project_name}</u> project by {owner}.</p>
+                        <p><a href="{url}">Click here</a> to join the {project_name} project</p>
+                        <p>{url}</p>. 
+                        If not copy and paste to activate.
+                        <p>Thanks</p>
+                        <p>MLAngles</p>
+                    </div>
+                    </div>
+                    """
+                    msg.attach(MIMEText(email_body, 'html'))
+                    text = msg.as_string()
+                    s.sendmail("jayharisai1212@gmail.com", assign_person[per], text)
+                    save_data.save()
+            return Response({
+                'success': True,
+                'message': "MAIL SEND SUCCESSFULLY",
+
+            })
+        return Response({
+            'success': False
+        })
+    else:
+        # IF THERE IS NOT TOKEN
+        return Response({
+            'success': False,
+            'message': 'Try to login'
+        })
